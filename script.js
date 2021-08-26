@@ -1,10 +1,128 @@
 //kata fill
+
+
+const kataFillParaUsar =(array, valor,inicio,fim)=>{
+let tamanhoArray = array.length;
+let contador=inicio ; 
+    if(contador<0){
+    tamanhoArray+=(inicio*-1);
+    contador=0;
+    }else if(fim<0){
+    tamanhoArray+=(fim*-1);
+    fim =tamanhoArray;
+  }
+ for(contador; contador<tamanhoArray; contador++){
+  
+  if(contador<=fim){
+   retornafill(array,contador,valor);
+  }
+  
+}
+ return array
+}
+ function retornafill  (array,contador,valor){
+   console.log(contador);
+  array[contador]=valor;
+    return array;
+}
+
 //kata map
+const kataMapParaUsar=(array,funtion) =>{
+  let returno=[]
+  for(let cont= 0; cont<array.length; cont++){
+
+    returno.push(funtion(array[cont]))
+  }
+  return returno;
+}
+
 //kata some
+const kataSomeParausar = (array, funcao)=>{
+  for(let i=0;i<array.length;i++) {
+
+    comparadorSome(array[i],funcao);
+
+  }
+}
+  const comparadorSome=(valor, funcao)=>{
+
+    if(valor&&funcao == true) {
+      return true;
+    }else
+      return false;
+
+  }
+
 //kata find
-//kata findiIndex
+const kataFindParaUsar = (array, parametro) =>{
+  let testa=null;
+  for(let i=0; i<array.length; i++){
+   if(testa!==parametro)
+    testa= comparadorFind(array[contador],parametro);
+      else
+        return testa;
+  }
+  return undefined;
+
+  
+}
+
+const comparadorFind=(valor,parametro)=>{
+ 
+      if(valor===parametro){
+        return valor[contador];
+      }    
+ 
+}
+//kata findIndex
+const kataFindIndexParaUsar = (array, parametro,indiceInicio) =>{
+  if(indiceInicio===undefined){
+    indiceInicio=0; 
+  }
+     comparadorFindIndex(array,parametro, indiceInicio);
+  
+  
+}
+
+const comparadorFindIndex=(valor,parametro, indiceInicio)=>{
+ 
+
+    for(indiceInicio; indiceInicio<valor.length;indiceInicio++) {
+      if(valor[contador]===parametro){
+        return indiceInicio;
+      }    
+    }
+      return -1;
+}
+
+
 //kata every
 
+const kataEveryParaUsar = (array, parametro,indiceInicio) =>{
+  if(indiceInicio===undefined){
+    indiceInicio=0; 
+  }
+ let vendo =0;
+     for(indiceInicio; indiceInicio<array.length;indiceInicio++) {
+      vendo =comparadorEvery(array[indiceInicio],parametro)
+    
+    }
+    if(vendo>0){
+      return console.log('truthy');
+    }else
+      return console.log('falsy');
+
+  
+}
+
+const comparadorEvery=(valor, parametro)=>{
+  
+  if(valor===parametro){
+    return 1;
+  }else return 0;
+
+  
+}
 
 //kata filter
 const kataFilterParaUsar = (array, parametro) =>{
