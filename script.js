@@ -1,7 +1,7 @@
 //kata fill
 
 
-const kataFillParaUsar =(array, valor,inicio,fim)=>{
+const newFill =(array, valor,inicio,fim)=>{
 let tamanhoArray = array.length;
 let contador=inicio ; 
     if(contador<0){
@@ -20,6 +20,7 @@ let contador=inicio ;
 }
  return array
 }
+
  function retornafill  (array,contador,valor){
    console.log(contador);
   array[contador]=valor;
@@ -27,7 +28,7 @@ let contador=inicio ;
 }
 
 //kata map
-const kataMapParaUsar=(array,funtion) =>{
+const newMap=(array,funtion) =>{
   let returno=[]
   for(let cont= 0; cont<array.length; cont++){
 
@@ -37,7 +38,7 @@ const kataMapParaUsar=(array,funtion) =>{
 }
 
 //kata some
-const kataSomeParausar = (array, funcao)=>{
+const newSome = (array, funcao)=>{
   for(let i=0;i<array.length;i++) {
 
     comparadorSome(array[i],funcao);
@@ -54,7 +55,7 @@ const kataSomeParausar = (array, funcao)=>{
   }
 
 //kata find
-const kataFindParaUsar = (array, parametro) =>{
+const newFind = (array, parametro) =>{
   let testa=null;
   for(let i=0; i<array.length; i++){
    if(testa!==parametro)
@@ -75,7 +76,7 @@ const comparadorFind=(valor,parametro)=>{
  
 }
 //kata findIndex
-const kataFindIndexParaUsar = (array, parametro,indiceInicio) =>{
+const newFindIndex = (array, parametro,indiceInicio) =>{
   if(indiceInicio===undefined){
     indiceInicio=0; 
   }
@@ -98,7 +99,7 @@ const comparadorFindIndex=(valor,parametro, indiceInicio)=>{
 
 //kata every
 
-const kataEveryParaUsar = (array, parametro,indiceInicio) =>{
+const newEvery = (array, parametro,indiceInicio) =>{
   if(indiceInicio===undefined){
     indiceInicio=0; 
   }
@@ -125,7 +126,7 @@ const comparadorEvery=(valor, parametro)=>{
 }
 
 //kata filter
-const kataFilterParaUsar = (array, parametro) =>{
+const newFilter = (array, parametro) =>{
   if(indiceInicio===undefined){
     indiceInicio=0; 
   }
@@ -157,7 +158,7 @@ const comparadorFilter=(valor,parametro)=>{
 }
 
 //kata concat
-const kataConcatParaUsar = (...arguments) => {
+const newConcat = (...arguments) => {
   let arrayMaster;
     arrayMaster.push(...arguments);
   return arrayMaster;
@@ -165,7 +166,7 @@ const kataConcatParaUsar = (...arguments) => {
 
 //kata includes
 
-const kataIncludesParaUsar = (array, parametro, indiceInicio) =>{
+const newIncludes = (array, parametro, indiceInicio) =>{
   if(indiceInicio===undefined){
     indiceInicio=0; 
   }
@@ -194,7 +195,7 @@ const comparadorIncludes=(valor,parametro)=>{
 
 //kata indexof
 
-const kataIndexOfParaUsar = (array, parametro, indiceInicio) =>{
+const newIndexOf = (array, parametro, indiceInicio) =>{
   if(indiceInicio===undefined){
     indiceInicio=0; 
   }
@@ -220,7 +221,7 @@ const comparador=(valor,parametro, indiceInicio)=>{
 }
 
 //kata ForEach
-const kataForEachParaUsar = (array, funcao, indice)=>{
+const newForEach = (array, funcao, indice)=>{
   for(let contador=0;contador<array.length;contador++){
   if(indice===undefined){  
     funcao(array[contador])
@@ -241,7 +242,7 @@ const testaPar =(n)=>{
 
 const kataJoin = (arrayvalorbase, arrayvalor2,separador) => arrayvalorbase + arrayvalor2+separador;
 
-const kataJoinParaUsar = (array, separador) => {
+const newJoin = (array, separador) => {
   let junta = "";
   for (let i = 0; i < array.length; i++) {
     if(separador=== undefined)
@@ -253,7 +254,7 @@ const kataJoinParaUsar = (array, separador) => {
 
 //Kata reduce 
 
-const kataReduceParaUsar =(array, acomulador) => {
+const newReduce =(array, acomulador) => {
   let reduce = 0;
   if(acomulador===undefined){
     acomulador =0;
